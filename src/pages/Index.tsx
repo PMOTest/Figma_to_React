@@ -1,13 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { DashboardLayout } from "@/components/DashboardLayout"
+import { DashboardStats } from "@/components/DashboardStats"
+import { KanbanBoard } from "@/components/KanbanBoard"
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <DashboardLayout>
+      <div className="space-y-8">
+        <div>
+          <h1 className="text-2xl font-bold tracking-tight">Welcome back!</h1>
+          <p className="text-muted-foreground mt-1">
+            Here's an overview of your projects and tasks.
+          </p>
+        </div>
+        
+        <DashboardStats />
+        
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Task Board</h2>
+          <KanbanBoard />
+        </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 
